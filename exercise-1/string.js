@@ -14,7 +14,7 @@ function capitalize(param){
   splitString = param.split(" ");
   i=0;concatString="";
   while (i<splitString.length) {//Recoller les string en mettant la première lettre en MAJ
-      concatString += ucfirst(splitString[i])+" ";i++;
+      concatString += ucfirst(splitString[i]+" ");i++;
   }
   return concatString;
 }
