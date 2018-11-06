@@ -1,9 +1,9 @@
-var string = "hello word";
+var string = "Hello World";
 
 //ucfirst
 function ucfirst(param) {
   //substring( rang de la lettre du début , rang de la dernière lettre )
-  return param.charAt(0).toUpperCase()+param.substring(1,param.length).toLowerCase();
+  return param.charAt(0).toUpperCase()+param.substring(1,param.length);
 }
 console.log(ucfirst(string));
 
@@ -49,14 +49,14 @@ function leet (str){
   strLeet = "";
   for (var i = 0; i < str.length; i++) {
     if (str[i].toLowerCase() === "l") { strLeet += "1"; }
-    else if (str[i].toLowerCase() === "e") { strLeet += "3"; }
     else if (str[i].toLowerCase() === "a") { strLeet += "4"; }
-    else if (str[i].toLowerCase() === "t") { strLeet += "7"; }
-    else if (str[i].toLowerCase() === "s") { strLeet += "5"; }
+    else if (str[i].toLowerCase() === "e") { strLeet += "3"; }
+    else if (str[i].toLowerCase() === "i") { strLeet += "1"; }
     else if (str[i].toLowerCase() === "o") { strLeet += "0"; }
+    else if (str[i].toLowerCase() === "u") { strLeet += "(_)"; }
+    else if (str[i].toLowerCase() === "y") { strLeet += "7"; }
     else { strLeet += str[i].toLowerCase(); }
   }
   return strLeet;
 }
-
 console.log(leet(string));
