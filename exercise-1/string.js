@@ -46,21 +46,17 @@ console.log(snake_case(string));
 
 //leet
 function leet (str){
-
-  var leetCode = {
-    a : 4,
-    e : 3,
-    i : 1,
-    o : 0,
-    u : '(_)',
-    y : 7
+  strLeet = "";
+  for (var i = 0; i < str.length; i++) {
+    if (str[i].toLowerCase() === "l") { strLeet += "1"; }
+    else if (str[i].toLowerCase() === "e") { strLeet += "3"; }
+    else if (str[i].toLowerCase() === "a") { strLeet += "4"; }
+    else if (str[i].toLowerCase() === "t") { strLeet += "7"; }
+    else if (str[i].toLowerCase() === "s") { strLeet += "5"; }
+    else if (str[i].toLowerCase() === "o") { strLeet += "0"; }
+    else { strLeet += str[i].toLowerCase(); }
   }
-  var translatedStr = "";
-
-	for (i = 0; i < str.length; i++) {
-		translatedStr += leetCode[str.charAt(i).toUpperCase()];
-		}
-	return translatedStr;
+  return strLeet;
 }
 
 console.log(leet(string));
