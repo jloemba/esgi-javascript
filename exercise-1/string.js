@@ -91,18 +91,33 @@ console.log(leet(string));
 function verlan(str){
     return str.split("").reverse().join("");
 }
+console.log("----  VERLAN   ----");
 console.log(verlan(string));
 
 
 //prop_access
-function prop_access(instance,prop) {
+function prop_access(instance,path) {
 
-  obj = instance.concat(prop);
-  if(instance === null) return instance;
-  if(prop === null) return instance;
+    var splitedPath = path.split(".");
+    var i=0,flag=false;
+
+    if(instance != null && path != null){
+        while(i<splitedPath.length && !flag){
+          if(instance[splitedPath[i]] === undefined){
+            return null;
+          }
+          instance = instance[splitedPath[i]];
+          i++;
+        }
+        return instance;
+    }else{
+      return "Votre chemin/objet est indéfini";
+    }
 
 }
 
+console.log("--- PROP ACCESS ---");
+console.log(prop_access({"animal":{"type":{"name":'Scooby-Doo'}}} ,"animal.type.name" ));
 
 //yoda
 function yoda(str) {
