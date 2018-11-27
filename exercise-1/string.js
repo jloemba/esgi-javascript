@@ -6,9 +6,9 @@ function ucfirst(param) {
 
     if(param != null){
       if(typeof param == "string") return param.charAt(0).toUpperCase()+param.substring(1,param.length);
-      else return "Null";
+      else return ucfirst(typeof param);
     }
-    else "Null";
+    else return ucfirst(typeof param);
 }
 console.log("UC FIRST :");
 console.log(ucfirst(string));
