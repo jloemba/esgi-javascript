@@ -1,11 +1,16 @@
-var string = "Je fais mon exo de JS";
+var string = "je fais du javascript";
 
 //ucfirst
 function ucfirst(param) {
   //substring( rang de la lettre du début , rang de la dernière lettre )
-    if(param != null) return param.charAt(0).toUpperCase()+param.substring(1,param.length);
-    else null;
+
+    if(param != null){
+      if(typeof param == "string") return param.charAt(0).toUpperCase()+param.substring(1,param.length);
+      else return "Null";
+    }
+    else "Null";
 }
+console.log("UC FIRST :");
 console.log(ucfirst(string));
 
 
