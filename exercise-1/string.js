@@ -10,7 +10,7 @@ function ucfirst(param) {
     }
     else return ucfirst(typeof param);
 }
-console.log("UC FIRST :");
+console.log("----- UC FIRST -----");
 console.log(ucfirst(string));
 
 
@@ -18,13 +18,14 @@ console.log(ucfirst(string));
 function capitalize(param){
   //Découper lorsqu'il y a un espace
   splitString = param.split(" ");
-  i=0;concatString="";
+  i=1;concatString="";
   while (i<splitString.length) {//Recoller les string en mettant la première lettre en MAJ
       concatString += ucfirst(splitString[i]+" ");i++;
   }
   return concatString;
 }
 
+console.log("------ Capitalize -----");
 console.log(capitalize(string));
 
 //camelCase
@@ -39,6 +40,7 @@ function camelCase(param){
   return concatString;
 }
 
+console.log("------ CamelCase -----");
 console.log(camelCase(string));
 
 //snake_case
