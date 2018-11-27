@@ -1,9 +1,10 @@
-var string = "Hello World";
+var string = "Je fais mon exo de JS";
 
 //ucfirst
 function ucfirst(param) {
   //substring( rang de la lettre du début , rang de la dernière lettre )
-  return param.charAt(0).toUpperCase()+param.substring(1,param.length);
+    if(param != null) return param.charAt(0).toUpperCase()+param.substring(1,param.length);
+    else null;
 }
 console.log(ucfirst(string));
 
@@ -39,7 +40,6 @@ console.log(camelCase(string));
 function snake_case(param) {
   return param.split(" ").join('_');
 }
-
 console.log(snake_case(string));
 
 
@@ -60,3 +60,41 @@ function leet (str){
   return strLeet;
 }
 console.log(leet(string));
+
+
+//reverseString
+function verlan(str){
+    return str.split("").reverse().join("");
+}
+console.log(verlan(string));
+
+
+//prop_access
+function prop_access(instance,prop) {
+
+  obj = instance.concat(prop);
+  if(instance === null) return instance;
+  if(prop === null) return instance;
+
+}
+
+
+//yoda
+function yoda(str) {
+  tag=0;i=0;array=[];
+  while(i <str.length){  //distinguer les mots dans une chaîne
+    if(str[i] === ' '){ //
+         strItem = str.substring(tag,i);
+         array.push(strItem);
+         tag = i+1;
+    }
+    i++;
+  }
+  if(i===str.length){
+    strItem = str.substring(tag,i);
+    array.push(strItem);
+  }
+
+  return array.reverse().join(" ");
+}
+console.log(yoda(string));
