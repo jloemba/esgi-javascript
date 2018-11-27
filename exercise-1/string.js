@@ -17,15 +17,30 @@ console.log(ucfirst(string));
 //capitalize
 function capitalize(param){
   //Découper lorsqu'il y a un espace
-  splitString = param.split(" ");
-  console.log(splitString);
-  i=1;concatString="";
-  concatString += ucfirst(splitString[0]);
-  while (i<splitString.length) {//Recoller les string en mettant la première lettre en MAJ
-      concatString += ucfirst(" "+splitString[i]);
-      i++;
+    splitString = param.split(" ");
+
+    if(splitString!=null){
+      splitString = param.split(" ");
+      console.log(splitString);
+      i=1;concatString="";
+
+    if(splitString.length === 1){
+        return ucfirst(splitString[0]);
+    }else{
+        i=1;splitString = param.split(" ");
+
+        concatString += ucfirst(splitString[0]);
+        while (i<splitString.length) {//Recoller les string en mettant la première lettre en MAJ
+            concatString += ucfirst(" "+splitString[i]);
+            i++;
+
+        }
+        return concatString;
+    }
+
+
   }
-  return concatString;
+
 }
 
 console.log("------ Capitalize -----");
