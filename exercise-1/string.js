@@ -18,9 +18,12 @@ console.log(ucfirst(string));
 function capitalize(param){
   //Découper lorsqu'il y a un espace
   splitString = param.split(" ");
+  console.log(splitString);
   i=1;concatString="";
+  concatString += ucfirst(splitString[0]);
   while (i<splitString.length) {//Recoller les string en mettant la première lettre en MAJ
-      concatString += ucfirst(splitString[i]+" ");i++;
+      concatString += ucfirst(" "+splitString[i]);
+      i++;
   }
   return concatString;
 }
